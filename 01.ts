@@ -15,12 +15,11 @@ export function getListSimilarityScore(
   left: Array<number>,
   right: Array<number>,
 ): number {
-
   const getCount = (needle: number, haystack: Array<number>): number => {
     return haystack.reduce((acc: number, cur: number) => {
       return acc + Number(cur === needle);
-    }, 0)
-  }
+    }, 0);
+  };
 
   let result = 0;
   for (const num of left) {
@@ -45,5 +44,8 @@ if (import.meta.main) {
   }
 
   console.log("total distance = ", getListTotalDistance(leftList, rightList));
-  console.log("similarity score = ", getListSimilarityScore(leftList, rightList));
+  console.log(
+    "similarity score = ",
+    getListSimilarityScore(leftList, rightList),
+  );
 }

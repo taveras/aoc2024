@@ -1,5 +1,5 @@
 import { assertEquals } from "jsr:@std/assert";
-import { getListTotalDistance, getListSimilarityScore } from "./01.ts";
+import { getListSimilarityScore, getListTotalDistance } from "./01.ts";
 
 Deno.test("01 - getListTotalDistance", async () => {
   const leftList = [3, 4, 2, 1, 3, 3];
